@@ -5,49 +5,36 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
   push:
-    branches: ["main", "master"]
+    branches:
+      - main
+      - master
 
 jobs:
-  metrics:
+  github-metrics:
     runs-on: ubuntu-latest
+    environment:
+      name: production
     permissions:
       contents: write
 
     steps:
-      - name: Languages
+      - name: Generate GitHub signal
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics-languages.svg
+          filename: github-signal.svg
           token: ${{ secrets.METRICS_TOKEN }}
           user: ParthKhansali
-          template: terminal
-          base: ""
+
+          template: classic
+          base: header, metadata
+          config_display: large
+          config_timezone: Asia/Kolkata
+
           plugin_languages: yes
           plugin_languages_limit: 6
           plugin_languages_threshold: 1%
+          plugin_languages_sections: most-used
           plugin_languages_details: percentage
 
-      - name: Coding habits
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics-habits.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ParthKhansali
-          template: terminal
-          base: ""
-          plugin_habits: yes
-          plugin_habits_charts: yes
-          plugin_habits_facts: no
-          config_timezone: Asia/Kolkata
-
-      - name: Isometric contribution calendar
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics-calendar.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ParthKhansali
-          template: terminal
-          base: ""
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-          config_timezone: Asia/Kolkata
