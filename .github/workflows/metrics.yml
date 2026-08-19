@@ -9,11 +9,14 @@ on:
       - main
       - master
 
+concurrency:
+  group: github-profile-metrics
+  cancel-in-progress: true
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    environment:
-      name: production
+
     permissions:
       contents: write
 
