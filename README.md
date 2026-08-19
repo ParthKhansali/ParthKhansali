@@ -2,7 +2,7 @@
 
 <!-- HUD / MATRIX HEADER — inspired by the visual language of terminal-style GitHub profiles -->
 <a href="https://github.com/ParthKhansali">
-  <img src="https://res.cloudinary.com/dg5ijxsap/image/upload/v1780129216/gemini-svg_3_xsramr.svg" alt="HUD Matrix" width="100%" />
+  <img src="./parth-animated-hud.svg" width="100%" alt="Parth Khansali HUD"/>
 </a>
 
 <br>
