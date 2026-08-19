@@ -1,58 +1,45 @@
 <div align="center">
 
-<!-- HUD / MATRIX HEADER — inspired by the visual language of terminal-style GitHub profiles -->
-<a href="https://github.com/ParthKhansali">
-  <img src="./parth-animated-hud.svg" width="100%" alt="Parth Khansali HUD"/>
-</a>
-
-<br>
+<p align="center">
+  <img src="./parth-animated-hud.svg" width="100%" alt="Parth Khansali — animated developer HUD"/>
+</p>
 
 ### `PARTH KHANSALI`
 
 `CSE STUDENT` · `FULL-STACK BUILDER` · `AI / SYSTEMS EXPLORER`
 
-[![GitHub](https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ParthKhansali)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-111111?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://www.linkedin.com/in/parth-khansali/)
-[![Email](https://img.shields.io/badge/Email-111111?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:parthkhansali@gmail.com)
+<a href="https://github.com/ParthKhansali">
+  <img src="https://img.shields.io/badge/GitHub-0b0f0c?style=for-the-badge&logo=github&logoColor=39ff88" />
+</a>
+<a href="https://www.linkedin.com/in/parth-khansali/">
+  <img src="https://img.shields.io/badge/LinkedIn-0b0f0c?style=for-the-badge&logo=linkedin&logoColor=39ff88" />
+</a>
+<a href="mailto:parthkhansali@gmail.com">
+  <img src="https://img.shields.io/badge/Email-0b0f0c?style=for-the-badge&logo=gmail&logoColor=39ff88" />
+</a>
 
 </div>
 
 ---
 
-<div align="center">
-
-```text
-┌──────────────────────────────────────────────────────────────────────┐
-│  > booting parth.dev                                                │
-│  > role      : computer science student / software builder          │
-│  > currently : building products, systems and AI-first interfaces   │
-│  > focus     : AI • systems • full-stack • spatial data             │
-│  > status    : learning → building → shipping                       │
-└──────────────────────────────────────────────────────────────────────┘
-```
-
-</div>
-
 ## `whoami`
 
-I’m **Parth**, a Computer Science student who likes turning ambitious ideas into working software.
+I’m **Parth**, a third-year Computer Science student at **Graphic Era Hill University** who enjoys turning ambitious ideas into working software.
 
-I enjoy building products at the intersection of **AI, full-stack engineering, systems, and data-driven applications**. I care less about making another demo and more about building something that can survive outside a classroom.
+My strongest area is **full-stack product engineering**, with growing depth in **AI systems, intelligent applications and systems engineering**. I like building projects that solve real problems, have a usable interface and can evolve beyond a classroom demo.
 
-Currently exploring:
-
-`AI Systems` · `Agentic AI` · `Operating Systems` · `Cloud` · `Developer Tools` · `Spatial / GovTech`
+`AI Systems` · `Full-Stack` · `Operating Systems` · `Cloud` · `Data / Spatial Software`
 
 ---
 
 ## `stack`
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=cpp,java,python,js,ts,react,nextjs,nodejs,spring,mongodb,mysql,git,github,figma,aws" />
+  <img src="https://skillicons.dev/icons?i=cpp,java,python,js,ts,react,nextjs,nodejs,express,spring,mongodb,mysql,git,github,figma,aws" />
 </p>
 
 <p align="center">
-  <sub>Primary: Java • Python • C++ • JavaScript • SQL</sub>
+  <sub>Java · Python · C++ · JavaScript · SQL · React · Next.js · Spring Boot · Node.js</sub>
 </p>
 
 ---
@@ -63,22 +50,22 @@ Currently exploring:
 <tr>
 <td width="50%" valign="top">
 
-### OmniMentor
+### `01` — OmniMentor
 
 **Anticipatory AI Classroom OS**
 
-An adaptive classroom platform designed to predict learner needs, generate contextual explanations and personalize learning sessions.
+An AI-powered learning platform designed to anticipate learner needs, generate contextual explanations and personalize study sessions.
 
 `Next.js` `React` `Node.js` `Python` `AI`
 
 </td>
 <td width="50%" valign="top">
 
-### GEHU Connect
+### `02` — GEHU Connect
 
 **University Community Platform**
 
-A student-focused networking and communication platform connecting campus communities through a mobile-first experience.
+A mobile-first student networking and communication platform designed to connect campus communities.
 
 `React Native` `Spring Boot` `JWT` `Cloudflare R2`
 
@@ -88,22 +75,22 @@ A student-focused networking and communication platform connecting campus commun
 <tr>
 <td width="50%" valign="top">
 
-### TaskFlow
+### `03` — TaskFlow
 
 **Smart Project Management**
 
-A collaborative task and project management application built around clean workflows and a modern web interface.
+A full-stack project and task management system built around clean workflows, organization and productivity.
 
 `React` `Node.js` `Express` `MongoDB`
 
 </td>
 <td width="50%" valign="top">
 
-### Bank Management System
+### `04` — Bank Management System
 
-**Backend-focused Java application**
+**Java / Spring Boot Application**
 
-A structured banking application using a layered Spring Boot backend and relational data modelling.
+A structured banking application using layered backend architecture and relational data modelling.
 
 `Java` `Spring Boot` `MySQL`
 
@@ -113,48 +100,48 @@ A structured banking application using a layered Spring Boot backend and relatio
 
 ---
 
-## `activity.log`
-
-<p align="center">
-  <img src="./metrics-languages.svg" alt="Language activity" width="49%" />
-  <img src="./metrics-habits.svg" alt="Coding habits" width="49%" />
-</p>
-
-<p align="center">
-  <img src="./metrics-calendar.svg" alt="Isometric contribution calendar" width="82%" />
-</p>
-
-> The visuals above are generated automatically with **lowlighter/metrics** and refreshed by GitHub Actions.
-
----
-
 ## `engineering.focus`
 
 ```text
 [01] PRODUCT ENGINEERING
-     └─ Build polished interfaces + production-minded backends
+     └─ polished interfaces + production-minded backends
 
 [02] AI / INTELLIGENT SYSTEMS
-     └─ Explore anticipatory, agentic and adaptive software
+     └─ anticipatory, adaptive and agentic software
 
 [03] SYSTEMS
-     └─ Learn how software behaves beneath the application layer
+     └─ operating systems + software beneath the application layer
 
-[04] DATA + SPATIAL SOFTWARE
-     └─ Turn real-world datasets into useful visual products
+[04] DATA / SPATIAL SOFTWARE
+     └─ turning real-world datasets into useful products
 
 [05] OPEN SOURCE
-     └─ Learn in public, contribute, ship
+     └─ learn in public • contribute • ship
 ```
 
 ---
 
-## `numbers`
+## `github.signal`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&hide_border=true&bg_color=0d1117&title_color=39ff88&icon_color=39ff88&text_color=c9d1d9&include_all_commits=true" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&hide_border=true&bg_color=0d1117&title_color=39ff88&text_color=c9d1d9&langs_count=8" height="165" />
+  <img src="./github-signal.svg" width="100%" alt="GitHub language and contribution signal"/>
 </p>
+
+<sub>Live GitHub-derived signal generated automatically with lowlighter/metrics.</sub>
+
+---
+
+## `leadership`
+
+```text
+Director General — University MUN Club
+├─ Hosted 2 college-scale events
+├─ Promoted the club across 15–20 schools
+└─ Participated in 4 MUNs • 2 wins • IIT Roorkee participation
+
+iOS Student Developer Program
+└─ Apple + Infosys
+```
 
 ---
 
@@ -162,9 +149,9 @@ A structured banking application using a layered Spring Boot backend and relatio
 
 ```diff
 + building flagship software projects
-+ sharpening DSA / systems fundamentals
++ strengthening DSA + systems fundamentals
 + exploring AI-first product architecture
-+ experimenting with maps, data and real-world problem solving
++ working with maps, data and real-world problem solving
 + preparing for high-impact software engineering internships
 ```
 
@@ -173,17 +160,15 @@ A structured banking application using a layered Spring Boot backend and relatio
 ## `connect`
 
 <p align="center">
-  <a href="https://github.com/YOUR_GITHUB_USERNAME">GitHub</a>
+  <a href="https://github.com/ParthKhansali">GitHub</a>
   ·
-  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/parth-khansali/">LinkedIn</a>
   ·
-  <a href="mailto:YOUR_EMAIL">Email</a>
+  <a href="mailto:parthkhansali@gmail.com">Email</a>
 </p>
 
 <div align="center">
 
-### `> stay curious. build things. ship.`
-
-<img src="https://komarev.com/ghpvc/?username=YOUR_GITHUB_USERNAME&label=PROFILE+SIGNALS&color=39ff88&style=flat-square" alt="profile views" />
+### `> BUILD USEFUL THINGS. SHIP THEM WELL.`
 
 </div>
