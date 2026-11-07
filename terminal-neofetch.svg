@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <defs>
+    <linearGradient id="termBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#08140a"/>
+      <stop offset="100%" stop-color="#030704"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer frame -->
+  <rect x="2" y="2" width="916" height="416" rx="14" fill="url(#termBg)" stroke="#39ff6a" stroke-width="1.5"/>
+
+  <!-- Window title bar -->
+  <path d="M 2 16 Q 2 2 16 2 L 904 2 Q 918 2 918 16 L 918 38 L 2 38 Z" fill="#0d2212"/>
+  <line x1="2" y1="38" x2="918" y2="38" stroke="#14351b" stroke-width="1"/>
+
+  <!-- Traffic lights -->
+  <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="20" r="6" fill="#27c93f"/>
+
+  <!-- Window title text -->
+  <text x="460" y="24" fill="#7dff9a" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" font-weight="600" text-anchor="middle">parth@workstation: ~ (zsh) // neofetch --specs</text>
+
+  <!-- Left: Cyber Matrix Monogram / Terminal Art -->
+  <g transform="translate(45, 65)" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#39ff6a" opacity="0.95">
+    <text x="0" y="20">       .---.       </text>
+    <text x="0" y="38">      /     \      </text>
+    <text x="0" y="56">     | () () |     </text>
+    <text x="0" y="74">      \  ^  /      </text>
+    <text x="0" y="92">       |||||       </text>
+    <text x="0" y="110">     .&#39;     &#39;.     </text>
+    <text x="0" y="128">    /  PARTH  \    </text>
+    <text x="0" y="146">   |  BUILDER  |   </text>
+    <text x="0" y="164">   |   DARWIN  |   </text>
+    <text x="0" y="182">    \  SYSTEM /    </text>
+    <text x="0" y="200">     &#39;._____ .&#39;     </text>
+    <text x="0" y="218">      |     |      </text>
+    <text x="0" y="236">     /       \     </text>
+    <text x="0" y="254">    /_________\    </text>
+    <text x="0" y="272">   [ SYS_ACTIVE ]  </text>
+    <text x="0" y="290">    v2026.11 // OK </text>
+  </g>
+
+  <!-- Vertical separator -->
+  <line x1="230" y1="55" x2="230" y2="395" stroke="#14351b" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Right: Specs Details -->
+  <g transform="translate(260, 75)" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13">
+    <!-- Prompt & User -->
+    <text x="0" y="15" fill="#39ff6a" font-size="16" font-weight="700" filter="url(#glow)">parth@macbook-pro</text>
+    <text x="0" y="32" fill="#70c882">----------------------------------------------------</text>
+
+    <!-- Key-Value pairs -->
+    <text x="0" y="58" fill="#7dff9a" font-weight="600">OS</text>
+    <text x="130" y="58" fill="#d9ffe2">macOS Darwin (Apple Silicon) / Unix</text>
+
+    <text x="0" y="82" fill="#7dff9a" font-weight="600">HOST</text>
+    <text x="130" y="82" fill="#d9ffe2">Graphic Era Hill University, Class of 2028</text>
+
+    <text x="0" y="106" fill="#7dff9a" font-weight="600">DEGREE</text>
+    <text x="130" y="106" fill="#d9ffe2">B.Tech Computer Science &amp; Engineering</text>
+
+    <text x="0" y="130" fill="#7dff9a" font-weight="600">PHILOSOPHY</text>
+    <text x="130" y="130" fill="#39ff6a">&quot;Make complicated things feel simple.&quot;</text>
+
+    <text x="0" y="154" fill="#7dff9a" font-weight="600">FLAGSHIP</text>
+    <text x="130" y="154" fill="#d9ffe2">Netwich [macOS Multi-Interface Network Tool]</text>
+
+    <text x="0" y="178" fill="#7dff9a" font-weight="600">CAMPUS APP</text>
+    <text x="130" y="178" fill="#d9ffe2">GEHU Connect [Campus Mobile Platform / Testing]</text>
+
+    <text x="0" y="202" fill="#7dff9a" font-weight="600">SPATIAL &amp; GIS</text>
+    <text x="130" y="202" fill="#d9ffe2">Project Aranya [Wildlife Conflict Intelligence]</text>
+
+    <text x="0" y="226" fill="#7dff9a" font-weight="600">SIMULATION</text>
+    <text x="130" y="226" fill="#d9ffe2">MeghaVyuha (Error Atlas) + ORVESS-PAT (FSOC)</text>
+
+    <text x="0" y="250" fill="#7dff9a" font-weight="600">LEADERSHIP</text>
+    <text x="130" y="250" fill="#d9ffe2">Director General, University Model UN Club</text>
+
+    <text x="0" y="274" fill="#7dff9a" font-weight="600">UPTIME</text>
+    <text x="130" y="274" fill="#39ff6a">3 Years Active Engineering // Continuously Building</text>
+
+    <!-- Color blocks / palette -->
+    <g transform="translate(0, 295)">
+      <rect x="0" y="0" width="32" height="14" fill="#061008" stroke="#14351b" rx="2"/>
+      <rect x="38" y="0" width="32" height="14" fill="#14351b" rx="2"/>
+      <rect x="76" y="0" width="32" height="14" fill="#285832" rx="2"/>
+      <rect x="114" y="0" width="32" height="14" fill="#4d9b5c" rx="2"/>
+      <rect x="152" y="0" width="32" height="14" fill="#70c882" rx="2"/>
+      <rect x="190" y="0" width="32" height="14" fill="#7dff9a" rx="2"/>
+      <rect x="228" y="0" width="32" height="14" fill="#39ff6a" rx="2"/>
+      <rect x="266" y="0" width="32" height="14" fill="#d9ffe2" rx="2"/>
+    </g>
+  </g>
+</svg>

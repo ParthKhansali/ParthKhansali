@@ -26,15 +26,23 @@
   <img src="https://img.shields.io/badge/Portfolio-061008?style=for-the-badge&logo=safari&logoColor=39ff6a" alt="Portfolio" />
 </a>
 
-</div>
+<br/><br/>
 
----
+<p align="center">
+  <img src="./terminal-neofetch.svg" width="100%" alt="Parth Terminal Neofetch Telemetry" />
+</p>
+
+<p align="center">
+  <img src="./hud-divider.svg" width="100%" alt="HUD Divider" />
+</p>
+
+</div>
 
 ## `whoami`
 
 > *"I build software that makes complicated things feel simple."*
 
-I'm **Parth**, a third-year Computer Science student at **Graphic Era Hill University** (Class of 2028) based in Dehradun, India.
+I'm **Parth**, a third-year Computer Science student at **Graphic Era Hill University** (Class of 2028) in Dehradun, India.
 
 When something doesn't work the way I think it should, my first instinct is to pull it apart, understand the internals, and see if I can make it better. What excites me isn't checking off framework boxes. I like tackling problems where the plumbing underneath is complex, but the product in the user's hand feels effortless.
 
@@ -42,9 +50,17 @@ That spans low-level native macOS networking in **Netwich**, designing campus-wi
 
 Beyond code, I value clear communication. Leading my university's Model UN club as Director General taught me how to debate, organize teams, and explain technical ideas without hiding behind buzzwords.
 
----
+<div align="center">
+  <img src="./hud-divider.svg" width="100%" alt="HUD Divider" />
+</div>
 
-## `featured.builds`
+## `flagship.systems`
+
+<div align="center">
+  <img src="./netwich-schematic.svg" width="100%" alt="Netwich Architecture Schematic" />
+</div>
+
+<br/>
 
 <table>
 <tr>
@@ -52,36 +68,80 @@ Beyond code, I value clear communication. Leading my university's Model UN club 
 
 ### `01` · <a href="https://github.com/ParthKhansali/Netwich">Netwich</a>
 
-**Native macOS Multi-Interface Network Utility** · `Completed`
+**Native macOS Multi-Interface Network Utility** · `[STATUS: COMPLETED]`
 
-A native utility that coordinates traffic across multiple active network connections (such as Wi-Fi and USB tethering) and accelerates compatible downloads through parallel byte-range chunking.
+Netwich is a lightweight Mac utility that distributes network traffic across multiple active connections (Wi-Fi and phone USB tethering) and accelerates downloads through parallel byte-range requests.
 
-`Swift 6` `SwiftUI` `Darwin Networking` `SOCKS5`
+**Technical Architecture:**
+* Discovers and monitors physical Darwin network interfaces dynamically.
+* Binds outbound TCP sockets to specific interfaces on macOS.
+* Maintains interface-scoped routes so tethering remains usable even when Wi-Fi is the primary default route.
+* Slices large downloads into concurrent byte-range chunks with graceful single-stream fallback.
+* Native SwiftUI interface communicating through a lightweight local SOCKS5 proxy.
+
+`Swift 6` `SwiftUI` `Darwin Networking` `POSIX Sockets` `SOCKS5`
+
+<details>
+<summary><b>View Engineering Deep Dive</b></summary>
+<br/>
+The core challenge was Darwin interface-scoped routing. On macOS, default routing tables funnel all traffic through one primary interface. Netwich binds outbound streams to specific interface indexes (such as <code>en0</code> and <code>en4</code>), maintaining persistent throughput even during route switches.
+</details>
 
 </td>
 <td width="50%" valign="top">
 
 ### `02` · <a href="https://gehuconnect.in">GEHU Connect</a>
 
-**Campus Ecosystem Mobile Platform** · `In Testing`
+**Campus Ecosystem Mobile Platform** · `[STATUS: IN TESTING]`
 
-A student-first mobile platform bringing campus life into one unified space: peer community networking, academic resources, buy/sell marketplace, and student housing discovery.
+A student-first mobile platform bringing campus life into one unified space: peer community networking, academic resources, a student marketplace, and campus housing discovery.
 
-`React Native` `Expo` `Java Spring Boot` `Cloudflare R2`
+**Technical Architecture:**
+* React Native and Expo client delivering a responsive mobile experience.
+* Java Spring Boot REST backend with JWT authentication and modular service layers.
+* Cloudflare R2 object storage integration for fast image and file uploads via presigned URLs.
+* Firebase Cloud Messaging (FCM) dispatching campus updates and notification feeds.
+* Designed to eliminate the need for students to jump between disconnected portals.
+
+`React Native` `Expo` `Java` `Spring Boot` `Cloudflare R2` `FCM`
+
+<details>
+<summary><b>View Engineering Deep Dive</b></summary>
+<br/>
+Organized around high-frequency student interactions: Home, Academics, Marketplace, Housing, and Profile. Built to scale gracefully for thousands of active daily campus users with optimized image caching and token-based sessions.
+</details>
 
 </td>
 </tr>
+</table>
 
+<div align="center">
+  <img src="./hud-divider.svg" width="100%" alt="HUD Divider" />
+</div>
+
+## `applied.intelligence & simulation`
+
+<div align="center">
+  <img src="./hackathon-telemetry.svg" width="100%" alt="Active Hackathon Telemetry" />
+</div>
+
+<br/>
+
+<table>
 <tr>
 <td width="50%" valign="top">
 
 ### `03` · <a href="https://github.com/ParthKhansali/Project-Aranya">Project Aranya</a>
 
-**Geospatial Wildlife & Ecological Intelligence** · `Hackathon Project`
+**Geospatial Wildlife Intelligence & FRA Platform** · `Hackathon Project`
 
-Geospatial intelligence platform for India focused on predicting human-wildlife conflict hotspots, monitoring animal movement, and supporting evidence-based conservation response. Piloted with Uttarakhand GIS layers.
+Geospatial intelligence platform for India focused on predicting human-wildlife conflict hotspots, monitoring animal movement corridors, and supporting evidence-based conservation response.
 
-`JavaScript` `GIS` `Leaflet` `Turf.js` `Spatial Data`
+* Evaluates spatial data layers across Uttarakhand forest ranges.
+* Visual decision-support interface combining Leaflet mapping with spatial analysis tools.
+* Connected with Forest Rights Act (FRA) spatial boundary contexts to aid conservation planning.
+
+`JavaScript` `GIS` `Leaflet` `Turf.js` `Spatial Telemetry`
 
 </td>
 <td width="50%" valign="top">
@@ -90,7 +150,11 @@ Geospatial intelligence platform for India focused on predicting human-wildlife 
 
 **Weather Prediction Error Atlas & Analytics** · `Hackathon Project`
 
-An analytical tool and interactive Error Atlas investigating patterns where numerical weather forecasts diverge from ground-truth sensor measurements, turning raw error metrics into visual clarity.
+An analytical tool and interactive Error Atlas investigating patterns where numerical weather forecasts diverge from ground-truth sensor measurements.
+
+* Pinpoints regional divergence patterns between predictions and physical weather stations.
+* Models error variance surfaces to give meteorologists actionable visual feedback.
+* Turns complex statistical discrepancies into intuitive visual maps.
 
 `TypeScript` `Python` `Data Visualisation` `Error Modeling`
 
@@ -104,7 +168,11 @@ An analytical tool and interactive Error Atlas investigating patterns where nume
 
 **FSOC Coarse Pointing, Acquisition & Tracking Simulation** · `Hackathon Research (SIH26169)`
 
-Algorithmic and simulation workflow for Free Space Optical Communications (FSOC) coarse pointing, acquisition, and tracking. Evaluates control loops and optical tracking behavior using Python scientific computation and desktop visual feedback.
+An engineering prototype in the Free Space Optical Communications (FSOC) coarse pointing, acquisition, and tracking domain.
+
+* Python-based scientific simulation evaluating beam acquisition control loops under dynamic jitter and drift.
+* Desktop visualization interface providing real-time optical frame telemetry.
+* Run through repeatable Monte Carlo experiment runs to quantify pointing accuracy and convergence latency.
 
 `Python 3.10+` `PySide6` `NumPy` `SciPy` `OpenCV` `Matplotlib`
 
@@ -112,25 +180,9 @@ Algorithmic and simulation workflow for Free Space Optical Communications (FSOC)
 </tr>
 </table>
 
----
-
-## `engineering.philosophy`
-
-```text
-[01] DEEP INTERNALS -> INTUITIVE UTILITY
-     Untangle tricky Darwin networking and system behavior into a clean tool (Netwich).
-
-[02] FRAGMENTED NEEDS -> UNIFIED PRODUCT
-     Bring disconnected campus workflows into one cohesive student experience (GEHU Connect).
-
-[03] SPATIAL & WEATHER TELEMETRY -> CLEAR ACTION
-     Transform dense geospatial layers and forecast error patterns into visual answers (Aranya, MeghaVyuha).
-
-[04] RIGOROUS SIMULATION -> EMPIRICAL PROOF
-     Validate technical concepts under repeatable testing and simulation conditions (ORVESS-PAT).
-```
-
----
+<div align="center">
+  <img src="./hud-divider.svg" width="100%" alt="HUD Divider" />
+</div>
 
 ## `tech.arsenal`
 
@@ -139,7 +191,7 @@ Algorithmic and simulation workflow for Free Space Optical Communications (FSOC)
 </p>
 
 ```text
-SYSTEMS & NATIVE      Swift 6, SwiftUI, macOS Darwin Networking, POSIX, SOCKS5
+SYSTEMS & NATIVE      Swift 6, SwiftUI, macOS Darwin Networking, POSIX Sockets, SOCKS5
 CORE LANGUAGES        Java, Python, C++, TypeScript, JavaScript, SQL
 FRONTEND & MOBILE     React Native, Expo, React, Next.js, Tailwind CSS
 BACKEND & SERVICES    Spring Boot, Node.js, Express, REST APIs
@@ -148,7 +200,29 @@ SCIENTIFIC & GIS      NumPy, SciPy, OpenCV, Matplotlib, PySide6, Leaflet, Turf.j
 TOOLING & WORKFLOW    Git, GitHub Actions, Figma, Linux/Unix, Postman
 ```
 
----
+<div align="center">
+  <img src="./hud-divider.svg" width="100%" alt="HUD Divider" />
+</div>
+
+## `engineering.philosophy`
+
+```text
+[01] TRICKY INTERNALS -> CLEAN UTILITY
+     Deconstruct complex OS networking or system behavior into a focused tool (Netwich).
+
+[02] REAL CAMPUS NEEDS -> COHESIVE PRODUCT
+     Connect fragmented daily student life into a reliable mobile experience (GEHU Connect).
+
+[03] SPATIAL & WEATHER DATA -> DECISION SUPPORT
+     Translate geographic layers and prediction errors into visual intelligence (Aranya, MeghaVyuha).
+
+[04] RIGOROUS SIMULATION -> EMPIRICAL EVIDENCE
+     Test and measure technical hypotheses through repeatable scientific computing (ORVESS-PAT).
+```
+
+<div align="center">
+  <img src="./hud-divider.svg" width="100%" alt="HUD Divider" />
+</div>
 
 ## `leadership & field`
 
@@ -162,25 +236,9 @@ Apple + Infosys: iOS Student Developer Program
 └── Selective hands-on program in native iOS architecture, Swift, and Apple platform patterns
 ```
 
----
-
-## `github.signal`
-
-<p align="center">
-  <img src="./github-signal.svg" width="100%" alt="GitHub language and contribution signal" />
-</p>
-
-<p align="center">
-  <a href="https://github.com/ParthKhansali">
-    <img src="https://streak-stats.demolab.com/?user=ParthKhansali&theme=matrix&hide_border=true&background=061008&ring=39ff6a&fire=39ff6a&currStreakNum=d9ffe2&sideNums=7dff9a&sideLabels=70c882" alt="GitHub Contribution Streak" />
-  </a>
-</p>
-
-<p align="center">
-  <sub>Live GitHub-derived signal automatically refreshed via lowlighter/metrics GitHub Action.</sub>
-</p>
-
----
+<div align="center">
+  <img src="./hud-divider.svg" width="100%" alt="HUD Divider" />
+</div>
 
 ## `connect`
 
