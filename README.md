@@ -4,9 +4,13 @@
   <img src="./parth-animated-hud.svg" width="100%" alt="Parth Khansali: animated developer HUD" />
 </p>
 
-### `PARTH KHANSALI`
+# Parth Khansali
 
-`CSE STUDENT` · `NATIVE & FULL-STACK BUILDER` · `SYSTEMS & SIMULATION`
+### `CSE STUDENT` · `NATIVE &amp; FULL-STACK BUILDER` · `SYSTEMS &amp; SIMULATION`
+
+<p align="center">
+  <b>Parth Khansali</b> (@ParthKhansali) · Computer Science &amp; Systems Developer · Dehradun, India
+</p>
 
 <br/>
 
@@ -22,7 +26,7 @@
   <img src="https://img.shields.io/badge/Email-061008?style=for-the-badge&logo=gmail&logoColor=39ff6a" alt="Email" />
 </a>
 &nbsp;
-<a href="https://github.com/ParthKhansali/E-Portfolio">
+<a href="https://www.parthkhansali.tech">
   <img src="https://img.shields.io/badge/Portfolio-061008?style=for-the-badge&logo=safari&logoColor=39ff6a" alt="Portfolio" />
 </a>
 
@@ -256,7 +260,7 @@ Apple + Infosys: iOS Student Developer Program
   <img src="https://img.shields.io/badge/Email-061008?style=for-the-badge&logo=gmail&logoColor=39ff6a" alt="Email" />
 </a>
 &nbsp;
-<a href="https://github.com/ParthKhansali/E-Portfolio">
+<a href="https://www.parthkhansali.tech">
   <img src="https://img.shields.io/badge/Portfolio-061008?style=for-the-badge&logo=safari&logoColor=39ff6a" alt="Portfolio" />
 </a>
 
