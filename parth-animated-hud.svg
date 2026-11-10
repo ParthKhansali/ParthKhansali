@@ -174,10 +174,10 @@
   <text x="1145" y="197" fill="#d9ffe2" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12">Swift / Java / Python / TS</text>
 
   <text x="1025" y="221" fill="#7dff9a" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12">FLAGSHIP</text>
-  <text x="1145" y="221" fill="#39ff6a" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" font-weight="600">Netwich [Completed]</text>
+  <text x="1145" y="221" fill="#39ff6a" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" font-weight="600">GEHU Connect [Testing]</text>
 
-  <text x="1025" y="245" fill="#7dff9a" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12">CAMPUS APP</text>
-  <text x="1145" y="245" fill="#d9ffe2" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12">GEHU Connect [Testing]</text>
+  <text x="1025" y="245" fill="#7dff9a" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12">RELEASED</text>
+  <text x="1145" y="245" fill="#d9ffe2" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12">Netwich [macOS v0.1.0]</text>
 
   <text x="1025" y="269" fill="#7dff9a" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12">HACKATHONS</text>
   <text x="1145" y="269" fill="#d9ffe2" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12">Aranya • Megha • ORVESS</text>
@@ -199,44 +199,44 @@
 
   <!-- Project cards (3 columns) -->
   <g font-family="ui-monospace, 'SF Mono', 'Fira Code', Menlo, monospace">
-    <!-- Card 01: Netwich -->
+    <!-- Card 01: GEHU Connect (Sole Flagship) -->
     <rect x="45" y="420" width="420" height="205" rx="12" fill="#061109" stroke="#39ff6a" stroke-width="1.5"/>
     <rect x="45" y="420" width="420" height="4" fill="#39ff6a"/>
-    <text x="68" y="453" fill="#7dff9a" font-size="12" letter-spacing="1">// BUILD_01 · NATIVE MACOS</text>
-    <rect x="330" y="439" width="115" height="20" rx="4" fill="#0f2e16" stroke="#39ff6a" stroke-width="1"/>
-    <text x="387" y="453" fill="#39ff6a" font-size="10" font-weight="700" text-anchor="middle">COMPLETED</text>
+    <text x="68" y="453" fill="#7dff9a" font-size="12" letter-spacing="1">// BUILD_01 · SOLE FLAGSHIP</text>
+    <rect x="330" y="439" width="115" height="20" rx="4" fill="#1c2612" stroke="#8ade3b" stroke-width="1"/>
+    <text x="387" y="453" fill="#8ade3b" font-size="10" font-weight="700" text-anchor="middle">IN TESTING</text>
     
-    <text x="68" y="490" fill="#d9ffe2" font-size="22" font-weight="700">Netwich</text>
-    <text x="68" y="516" fill="#7dff9a" font-size="13" font-weight="600">Multi-Interface Network Utility</text>
-    <text x="68" y="544" fill="#c4eaca" font-size="12">Coordinates Wi-Fi + tethering streams</text>
-    <text x="68" y="564" fill="#c4eaca" font-size="12">Parallel byte-range download chunks</text>
-    <text x="68" y="598" fill="#39ff6a" font-size="11">SWIFT 6 · SWIFTUI · SOCKS5 · DARWIN</text>
+    <text x="68" y="490" fill="#d9ffe2" font-size="22" font-weight="700">GEHU Connect</text>
+    <text x="68" y="516" fill="#7dff9a" font-size="13" font-weight="600">Campus Life &amp; Student Ecosystem</text>
+    <text x="68" y="544" fill="#c4eaca" font-size="12">Academics, marketplace &amp; housing hub</text>
+    <text x="68" y="564" fill="#c4eaca" font-size="12">STOMP chat &amp; R2 cloud media storage</text>
+    <text x="68" y="598" fill="#39ff6a" font-size="11">REACT NATIVE · SPRING BOOT · R2 · STOMP</text>
 
-    <!-- Card 02: GEHU Connect -->
+    <!-- Card 02: Netwich (Completed & Released) -->
     <rect x="490" y="420" width="420" height="205" rx="12" fill="#061109" stroke="#39ff6a" stroke-width="1.5"/>
     <rect x="490" y="420" width="420" height="4" fill="#39ff6a"/>
-    <text x="513" y="453" fill="#7dff9a" font-size="12" letter-spacing="1">// BUILD_02 · FULL-STACK MOBILE</text>
-    <rect x="775" y="439" width="115" height="20" rx="4" fill="#1c2612" stroke="#8ade3b" stroke-width="1"/>
-    <text x="832" y="453" fill="#8ade3b" font-size="10" font-weight="700" text-anchor="middle">IN TESTING</text>
+    <text x="513" y="453" fill="#7dff9a" font-size="12" letter-spacing="1">// BUILD_02 · NATIVE MACOS</text>
+    <rect x="775" y="439" width="115" height="20" rx="4" fill="#0f2e16" stroke="#39ff6a" stroke-width="1"/>
+    <text x="832" y="453" fill="#39ff6a" font-size="10" font-weight="700" text-anchor="middle">RELEASED</text>
 
-    <text x="513" y="490" fill="#d9ffe2" font-size="22" font-weight="700">GEHU Connect</text>
-    <text x="513" y="516" fill="#7dff9a" font-size="13" font-weight="600">Campus Life &amp; Student Ecosystem</text>
-    <text x="513" y="544" fill="#c4eaca" font-size="12">Academics, marketplace &amp; housing hub</text>
-    <text x="513" y="564" fill="#c4eaca" font-size="12">Push alerts &amp; cloud R2 media storage</text>
-    <text x="513" y="598" fill="#39ff6a" font-size="11">REACT NATIVE · SPRING BOOT · R2 · FCM</text>
+    <text x="513" y="490" fill="#d9ffe2" font-size="22" font-weight="700">Netwich</text>
+    <text x="513" y="516" fill="#7dff9a" font-size="13" font-weight="600">Multi-Interface Network Utility</text>
+    <text x="513" y="544" fill="#c4eaca" font-size="12">Coordinates Wi-Fi + tethering streams</text>
+    <text x="513" y="564" fill="#c4eaca" font-size="12">Parallel byte-range chunks (v0.1.0)</text>
+    <text x="513" y="598" fill="#39ff6a" font-size="11">SWIFT 6 · SWIFTUI · SOCKS5 · IP_BOUND_IF</text>
 
     <!-- Card 03: Project Aranya -->
     <rect x="935" y="420" width="420" height="205" rx="12" fill="#061109" stroke="#39ff6a" stroke-width="1.5"/>
     <rect x="935" y="420" width="420" height="4" fill="#39ff6a"/>
     <text x="958" y="453" fill="#7dff9a" font-size="12" letter-spacing="1">// BUILD_03 · GEOSPATIAL GIS</text>
     <rect x="1220" y="439" width="115" height="20" rx="4" fill="#0a251a" stroke="#39ff6a" stroke-width="1"/>
-    <text x="1277" y="453" fill="#39ff6a" font-size="10" font-weight="700" text-anchor="middle">HACKATHON</text>
+    <text x="1277" y="453" fill="#39ff6a" font-size="10" font-weight="700" text-anchor="middle">ONGOING</text>
 
     <text x="958" y="490" fill="#d9ffe2" font-size="22" font-weight="700">Project Aranya</text>
-    <text x="958" y="516" fill="#7dff9a" font-size="13" font-weight="600">Wildlife &amp; FRA Intelligence Platform</text>
-    <text x="958" y="544" fill="#c4eaca" font-size="12">Conflict prediction &amp; movement monitoring</text>
-    <text x="958" y="564" fill="#c4eaca" font-size="12">GIS decision support (Uttarakhand pilot)</text>
-    <text x="958" y="598" fill="#39ff6a" font-size="11">GIS · LEAFLET · JAVASCRIPT · NODE</text>
+    <text x="958" y="516" fill="#7dff9a" font-size="13" font-weight="600">Wildlife &amp; Corridor Intelligence</text>
+    <text x="958" y="544" fill="#c4eaca" font-size="12">Conflict prediction &amp; movement GIS</text>
+    <text x="958" y="564" fill="#c4eaca" font-size="12">CesiumJS 3D globe (Uttarakhand pilot)</text>
+    <text x="958" y="598" fill="#39ff6a" font-size="11">CESIUMJS · VECTOR TILES · VITE · JS</text>
   </g>
 
   <!-- Bottom section divider -->

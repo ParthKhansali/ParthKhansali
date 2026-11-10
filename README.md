@@ -26,7 +26,7 @@
   <img src="https://img.shields.io/badge/Email-061008?style=for-the-badge&logo=gmail&logoColor=39ff6a" alt="Email" />
 </a>
 &nbsp;
-<a href="https://www.parthkhansali.tech">
+<a href="https://www.parthkhansali.tech/">
   <img src="https://img.shields.io/badge/Portfolio-061008?style=for-the-badge&logo=safari&logoColor=39ff6a" alt="Portfolio" />
 </a>
 
@@ -58,7 +58,7 @@ Beyond code, I value clear communication. Leading my university's Model UN club 
   <img src="./hud-divider.svg" width="100%" alt="HUD Divider" />
 </div>
 
-## `flagship.systems`
+## `systems.featured`
 
 <div align="center">
   <img src="./netwich-schematic.svg" width="100%" alt="Netwich Architecture Schematic" />
@@ -70,49 +70,48 @@ Beyond code, I value clear communication. Leading my university's Model UN club 
 <tr>
 <td width="50%" valign="top">
 
-### `01` · <a href="https://github.com/ParthKhansali/Netwich">Netwich</a>
+### `01` · <a href="https://www.parthkhansali.tech/projects/gehu-connect/">GEHU Connect</a>
 
-**Native macOS Multi-Interface Network Utility** · `[STATUS: COMPLETED]`
+**Sole Flagship · Campus Ecosystem Mobile Platform** · `[STATUS: IN TESTING]`
 
-Netwich is a lightweight Mac utility that distributes network traffic across multiple active connections (Wi-Fi and phone USB tethering) and accelerates downloads through parallel byte-range requests.
+A student-first mobile platform bringing campus life into one unified space: peer community networking, academic resources, a student marketplace, and campus housing discovery.
 
 **Technical Architecture:**
-* Discovers and monitors physical Darwin network interfaces dynamically.
-* Binds outbound TCP sockets to specific interfaces on macOS.
-* Maintains interface-scoped routes so tethering remains usable even when Wi-Fi is the primary default route.
-* Slices large downloads into concurrent byte-range chunks with graceful single-stream fallback.
-* Native SwiftUI interface communicating through a lightweight local SOCKS5 proxy.
+* React Native and Expo Router client with Redux Toolkit Query caching and SecureStore token handling.
+* Java 21 / Spring Boot 3.5.9 REST backend with JWT authentication, PostgreSQL persistence, and STOMP WebSockets.
+* Direct-to-Cloudflare R2 presigned object uploads via AWS SDK `S3Presigner` to keep media bytes off API worker threads.
+* Layered L1 Caffeine + L2 Redis permission cache with stampede locks designed for spotty campus connectivity.
 
-`Swift 6` `SwiftUI` `Darwin Networking` `POSIX Sockets` `SOCKS5`
+`React Native` `Expo` `Java` `Spring Boot` `Redis` `Cloudflare R2` `STOMP WebSockets`
 
 <details>
 <summary><b>View Engineering Deep Dive</b></summary>
 <br/>
-The core challenge was Darwin interface-scoped routing. On macOS, default routing tables funnel all traffic through one primary interface. Netwich binds outbound streams to specific interface indexes (such as <code>en0</code> and <code>en4</code>), maintaining persistent throughput even during route switches.
+Organized around high-frequency student workflows: Home, Academics, Marketplace, Housing, and Profile. Built with bounded upload concurrency, layered caching, and session-scoped STOMP WebSocket auth. Source code is private; see the full architecture breakdown on <a href="https://www.parthkhansali.tech/projects/gehu-connect/">parthkhansali.tech</a>.
 </details>
 
 </td>
 <td width="50%" valign="top">
 
-### `02` · <a href="https://gehuconnect.in">GEHU Connect</a>
+### `02` · <a href="https://github.com/ParthKhansali/Netwich">Netwich</a>
 
-**Campus Ecosystem Mobile Platform** · `[STATUS: IN TESTING]`
+**Native macOS Multi-Interface Network Utility** · `[STATUS: COMPLETED & RELEASED v0.1.0]`
 
-A student-first mobile platform bringing campus life into one unified space: peer community networking, academic resources, a student marketplace, and campus housing discovery.
+Netwich is a lightweight Mac utility that distributes network traffic across multiple active connections (Wi-Fi, Ethernet, and phone USB tethering) and accelerates compatible downloads through parallel byte-range requests.
 
 **Technical Architecture:**
-* React Native and Expo client delivering a responsive mobile experience.
-* Java Spring Boot REST backend with JWT authentication and modular service layers.
-* Cloudflare R2 object storage integration for fast image and file uploads via presigned URLs.
-* Firebase Cloud Messaging (FCM) dispatching campus updates and notification feeds.
-* Designed to eliminate the need for students to jump between disconnected portals.
+* Discovers and monitors physical Darwin network interfaces dynamically (`en0`, `en4`, `en5`).
+* Binds outbound TCP sockets to specific interfaces on macOS via `IP_BOUND_IF`.
+* Maintains interface-scoped routes and EWMA link health scoring so tethering stays usable alongside Wi-Fi.
+* Slices compatible downloads into concurrent byte-range chunks with graceful single-stream fallback.
+* Native SwiftUI interface communicating through a local `127.0.0.1:1080` SOCKS5 proxy and browser extensions (`31` passing unit tests).
 
-`React Native` `Expo` `Java` `Spring Boot` `Cloudflare R2` `FCM`
+`Swift 6` `SwiftUI` `Darwin Networking` `IP_BOUND_IF` `SOCKS5`
 
 <details>
-<summary><b>View Engineering Deep Dive</b></summary>
+<summary><b>View Releases &amp; Engineering Deep Dive</b></summary>
 <br/>
-Organized around high-frequency student interactions: Home, Academics, Marketplace, Housing, and Profile. Built to scale gracefully for thousands of active daily campus users with optimized image caching and token-based sessions.
+Download <a href="https://github.com/ParthKhansali/Netwich/releases">Netwich v0.1.0 DMG &amp; Extensions</a> or read the <a href="https://www.parthkhansali.tech/projects/netwich/">case study on parthkhansali.tech</a>. On macOS, default routing tables funnel traffic through a single primary adapter; Netwich binds individual outbound streams onto specific interfaces without cloud relays.
 </details>
 
 </td>
@@ -137,30 +136,32 @@ Organized around high-frequency student interactions: Home, Academics, Marketpla
 
 ### `03` · <a href="https://github.com/ParthKhansali/Project-Aranya">Project Aranya</a>
 
-**Geospatial Wildlife Intelligence & FRA Platform** · `Hackathon Project`
+**Geospatial Wildlife Intelligence Platform** · `Ongoing Hackathon Project`
 
-Geospatial intelligence platform for India focused on predicting human-wildlife conflict hotspots, monitoring animal movement corridors, and supporting evidence-based conservation response.
+Geospatial decision-support platform for India focused on exploring human-wildlife conflict zones, movement corridors, and conservation hotspots across Uttarakhand's Rajaji and Corbett pilot landscape.
 
-* Evaluates spatial data layers across Uttarakhand forest ranges.
-* Visual decision-support interface combining Leaflet mapping with spatial analysis tools.
-* Connected with Forest Rights Act (FRA) spatial boundary contexts to aid conservation planning.
+* Built on a CesiumJS 3D globe centered on India and Uttarakhand pilot corridors.
+* Combines modular spatial layers, Mapbox Vector Tiles, and NASA GIBS MODIS NDVI canopy overlays.
+* Breaks down risk zones transparently by corridor proximity, sightings recency, and habitat fragmentation.
+* Links: <a href="https://project-aranya.vercel.app">Live Prototype</a> · <a href="https://www.parthkhansali.tech/projects/aranya/">Case Study</a>
 
-`JavaScript` `GIS` `Leaflet` `Turf.js` `Spatial Telemetry`
+`JavaScript` `CesiumJS` `Vite` `Vector Tiles` `Geospatial Data`
 
 </td>
 <td width="50%" valign="top">
 
 ### `04` · <a href="https://github.com/ParthKhansali/MeghaVyuha">MeghaVyuha</a>
 
-**Weather Prediction Error Atlas & Analytics** · `Hackathon Project`
+**Weather Prediction Error Atlas & Analytics** · `Ongoing Hackathon Project (SIH26080)`
 
-An analytical tool and interactive Error Atlas investigating patterns where numerical weather forecasts diverge from ground-truth sensor measurements.
+An interactive Error Atlas prototype investigating patterns where numerical monsoon rainfall forecasts diverge across synoptic regimes and Indian terrain.
 
-* Pinpoints regional divergence patterns between predictions and physical weather stations.
-* Models error variance surfaces to give meteorologists actionable visual feedback.
-* Turns complex statistical discrepancies into intuitive visual maps.
+* Next.js 15, React 19, deck.gl, and MapLibre GL forecast verification workspace.
+* Compares candidate post-processing baselines (Raw NWP, Hurdle, CSG-EMOS) with an explicit Evidence Trace.
+* Research prototype exploring complex discrepancy surfaces, not a replacement for operational weather advisories.
+* Links: <a href="https://meghavyuha.vercel.app">Live Prototype</a> · <a href="https://www.parthkhansali.tech/projects/meghavyuha/">Case Study</a>
 
-`TypeScript` `Python` `Data Visualisation` `Error Modeling`
+`Next.js 15` `TypeScript` `deck.gl` `MapLibre GL` `Python`
 
 </td>
 </tr>
@@ -168,17 +169,17 @@ An analytical tool and interactive Error Atlas investigating patterns where nume
 <tr>
 <td colspan="2" valign="top">
 
-### `05` · ORVESS-PAT
+### `05` · <a href="https://www.parthkhansali.tech/projects/orvess-pat/">ORVESS-PAT</a>
 
-**FSOC Coarse Pointing, Acquisition & Tracking Simulation** · `Hackathon Research (SIH26169)`
+**FSOC Coarse Pointing, Acquisition & Tracking Simulation** · `Ongoing Research Prototype (SIH26169)`
 
-An engineering prototype in the Free Space Optical Communications (FSOC) coarse pointing, acquisition, and tracking domain.
+An ongoing Python simulation prototype in the Free Space Optical Communications (FSOC) coarse pointing, acquisition, and tracking domain.
 
-* Python-based scientific simulation evaluating beam acquisition control loops under dynamic jitter and drift.
-* Desktop visualization interface providing real-time optical frame telemetry.
-* Run through repeatable Monte Carlo experiment runs to quantify pointing accuracy and convergence latency.
+* Models a 640x480 focal-plane array, optical attenuation/noise, sub-pixel centroiding, and an Adaptive-R Extended Kalman Filter.
+* PySide6 + PyQtGraph desktop workbench comparing Baseline vs. Adaptive tracker configurations side by side.
+* Synthetic simulation workbench built for repeatable experiments, not tested on physical laser bench hardware.
 
-`Python 3.10+` `PySide6` `NumPy` `SciPy` `OpenCV` `Matplotlib`
+`Python 3.10+` `PySide6` `PyQtGraph` `NumPy` `SciPy` `OpenCV`
 
 </td>
 </tr>
@@ -195,12 +196,12 @@ An engineering prototype in the Free Space Optical Communications (FSOC) coarse 
 </p>
 
 ```text
-SYSTEMS & NATIVE      Swift 6, SwiftUI, macOS Darwin Networking, POSIX Sockets, SOCKS5
+SYSTEMS & NATIVE      Swift 6, SwiftUI, macOS Darwin Networking, IP_BOUND_IF, SOCKS5
 CORE LANGUAGES        Java, Python, C++, TypeScript, JavaScript, SQL
 FRONTEND & MOBILE     React Native, Expo, React, Next.js, Tailwind CSS
-BACKEND & SERVICES    Spring Boot, Node.js, Express, REST APIs
-DATABASES & CLOUD     PostgreSQL, MongoDB, MySQL, Cloudflare R2, AWS, Firebase
-SCIENTIFIC & GIS      NumPy, SciPy, OpenCV, Matplotlib, PySide6, Leaflet, Turf.js
+BACKEND & SERVICES    Spring Boot, Node.js, Express, REST APIs, STOMP WebSockets
+DATABASES & CLOUD     PostgreSQL, Redis, MongoDB, MySQL, Cloudflare R2, AWS SDK, Firebase
+SCIENTIFIC & GIS      CesiumJS, Mapbox Vector Tiles, deck.gl, MapLibre GL, PySide6, PyQtGraph, NumPy, SciPy, OpenCV
 TOOLING & WORKFLOW    Git, GitHub Actions, Figma, Linux/Unix, Postman
 ```
 
@@ -232,9 +233,9 @@ TOOLING & WORKFLOW    Git, GitHub Actions, Figma, Linux/Unix, Postman
 
 ```text
 Director General: University Model UN Club
-├── Directed 2 college-scale conferences with 200+ delegates
-├── Led outreach campaigns across 15 to 20 regional schools
-└── Competed in 4 conferences (2 delegate awards, including IIT Roorkee participation)
+├── Hosts university Model UN conferences, committee ops, and delegate training
+├── Led outreach workshops across 15+ schools in Dehradun
+└── Delegate record: High Commendation at Lokvidhan MUN, delegate at IIT Roorkee MUN
 
 Apple + Infosys: iOS Student Developer Program
 └── Selective hands-on program in native iOS architecture, Swift, and Apple platform patterns
@@ -260,11 +261,21 @@ Apple + Infosys: iOS Student Developer Program
   <img src="https://img.shields.io/badge/Email-061008?style=for-the-badge&logo=gmail&logoColor=39ff6a" alt="Email" />
 </a>
 &nbsp;
-<a href="https://www.parthkhansali.tech">
+<a href="https://www.parthkhansali.tech/">
   <img src="https://img.shields.io/badge/Portfolio-061008?style=for-the-badge&logo=safari&logoColor=39ff6a" alt="Portfolio" />
 </a>
 
 <br/><br/>
+
+<p>
+  <a href="https://www.parthkhansali.tech/">Portfolio Site</a> ·
+  <a href="https://www.parthkhansali.tech/notes/">Engineering Notes</a> ·
+  <a href="https://github.com/ParthKhansali/parthkhansali.tech">Portfolio Source Repo</a> ·
+  <a href="https://www.youtube.com/@Its_Parth">YouTube</a> ·
+  <a href="https://www.instagram.com/parth_khansali/">Instagram</a>
+</p>
+
+<br/>
 
 ```text
 parth@workstation:~$ ./status --report
