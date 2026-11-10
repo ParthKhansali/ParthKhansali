@@ -49,114 +49,138 @@
   <!-- Window title text -->
   <text x="460" y="24" fill="#7dff9a" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" font-weight="600" text-anchor="middle">parth@workstation: ~ (zsh) // neofetch --specs</text>
 
-  <!-- Left: Animated Gotham Bat-Signal + Batman Standing (Back View, Cape Flowing) -->
+  <!-- Left: Cinematic Gotham City + Huge Animated Bat-Signal + Batman Rooftop Pose -->
   <g clip-path="url(#batPanelClip)">
-    <!-- Subtle spotlight beam rising from rooftop edge into night sky -->
-    <polygon points="147,392 18,46 276,46" fill="#39ff6a" opacity="0.045"/>
+    <!-- Atmospheric horizon haze behind Gotham -->
+    <linearGradient id="cityHaze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#030704" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#0a2611" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#020503" stop-opacity="0.9"/>
+    </linearGradient>
+    <rect x="6" y="180" width="282" height="220" fill="url(#cityHaze)"/>
 
-    <!-- Animated Bat-Signal Halo & Tactical Rings -->
-    <g transform="translate(147, 134)">
-      <circle r="102" fill="url(#batSignal)">
-        <animate attributeName="r" values="96;108;96" dur="3.6s" repeatCount="indefinite"/>
+    <!-- Wide cinematic Bat-Signal spotlight cone across the sky -->
+    <polygon points="147,340 6,40 288,40" fill="#39ff6a" opacity="0.04"/>
+
+    <!-- Giant Animated Bat-Signal Emblem -->
+    <g transform="translate(147, 126)">
+      <circle r="130" fill="url(#batSignal)">
+        <animate attributeName="r" values="122;136;122" dur="3.8s" repeatCount="indefinite"/>
       </circle>
-      <circle r="86" fill="none" stroke="#39ff6a" stroke-width="1.1" opacity="0.34" stroke-dasharray="6 10">
-        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="28s" repeatCount="indefinite"/>
+      <circle r="114" fill="none" stroke="#39ff6a" stroke-width="0.9" opacity="0.26" stroke-dasharray="5 12">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="32s" repeatCount="indefinite"/>
       </circle>
-      <circle r="72" fill="none" stroke="#7dff9a" stroke-width="0.9" opacity="0.22" stroke-dasharray="3 12">
-        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="20s" repeatCount="indefinite"/>
+      <circle r="98" fill="none" stroke="#7dff9a" stroke-width="0.8" opacity="0.16" stroke-dasharray="2 14">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="22s" repeatCount="indefinite"/>
       </circle>
 
-      <!-- Glowing Bat-Symbol Emblem -->
-      <g filter="url(#softBatGlow)">
+      <!-- Scaled-up Iconic Bat-Symbol -->
+      <g transform="scale(1.32)" filter="url(#softBatGlow)">
         <path d="M 0,-18 C 3,-18 5,-19 6,-20 L 9,-34 L 13,-17 C 21,-13 31,-14 39,-24 C 55,-30 71,-29 86,-22 C 69,-11 60,4 56,19 C 47,6 35,6 28,23 C 18,9 9,14 0,34 C -9,14 -18,9 -28,23 C -35,6 -47,6 -56,19 C -60,4 -69,-11 -86,-22 C -71,-29 -55,-30 -39,-24 C -31,-14 -21,-13 -13,-17 L -9,-34 L -6,-20 C -5,-19 -3,-18 0,-18 Z"
-              fill="#040d06" stroke="#39ff6a" stroke-width="1.8">
-          <animate attributeName="stroke-opacity" values="0.75;1;0.75" dur="2.4s" repeatCount="indefinite"/>
+              fill="#040d06" stroke="#39ff6a" stroke-width="1.6">
+          <animate attributeName="stroke-opacity" values="0.72;1;0.72" dur="2.5s" repeatCount="indefinite"/>
         </path>
-        <!-- Pulsing neon energy trace around Bat-Symbol -->
+        <!-- Animated energy pulse sweeping around the Bat-Symbol edge -->
         <path d="M 0,-18 C 3,-18 5,-19 6,-20 L 9,-34 L 13,-17 C 21,-13 31,-14 39,-24 C 55,-30 71,-29 86,-22 C 69,-11 60,4 56,19 C 47,6 35,6 28,23 C 18,9 9,14 0,34 C -9,14 -18,9 -28,23 C -35,6 -47,6 -56,19 C -60,4 -69,-11 -86,-22 C -71,-29 -55,-30 -39,-24 C -31,-14 -21,-13 -13,-17 L -9,-34 L -6,-20 C -5,-19 -3,-18 0,-18 Z"
-              fill="none" stroke="#b6ffca" stroke-width="1.4" stroke-dasharray="55 240" opacity="0.85">
-          <animate attributeName="stroke-dashoffset" from="0" to="-295" dur="4s" repeatCount="indefinite"/>
+              fill="none" stroke="#b6ffca" stroke-width="1.2" stroke-dasharray="55 240" opacity="0.88">
+          <animate attributeName="stroke-dashoffset" from="0" to="-295" dur="4.2s" repeatCount="indefinite"/>
         </path>
       </g>
     </g>
 
-    <!-- Distant Gotham Skyline Silhouette -->
-    <path d="M 6,386 L 6,320 L 22,320 L 22,296 L 42,296 L 42,334 L 60,334 L 60,282 L 78,282 L 78,318 L 210,318 L 210,276 L 232,276 L 232,310 L 254,310 L 254,288 L 272,288 L 272,330 L 288,330 L 288,386 Z"
-          fill="#061309" stroke="#14351b" stroke-width="0.8" opacity="0.7"/>
+    <!-- Layer 1: Far Gotham Skyline Spires -->
+    <path d="M 6,385 L 6,258 L 22,258 L 22,226 L 29,210 L 36,226 L 36,268 L 54,268 L 54,238 L 76,238 L 76,274 L 166,274 L 166,244 L 188,244 L 188,214 L 195,192 L 202,214 L 202,254 L 220,254 L 220,224 L 246,224 L 246,264 L 262,264 L 262,234 L 288,234 L 288,385 Z"
+          fill="#040d06" stroke="#113118" stroke-width="0.7" opacity="0.75"/>
+    <!-- Blinking spire beacons on Gotham towers -->
+    <circle cx="29" cy="208" r="1.4" fill="#39ff6a" filter="url(#glow)">
+      <animate attributeName="opacity" values="1;0.15;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="195" cy="190" r="1.5" fill="#ff5f56" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
 
-    <!-- Animated Wind / Rain Streaks -->
-    <g stroke="#39ff6a" stroke-width="1" stroke-linecap="round" opacity="0.22">
-      <line x1="20" y1="88" x2="65" y2="80">
+    <!-- Layer 2: Midground Gotham City Towers + Subtle Lit Windows -->
+    <path d="M 6,385 L 6,292 L 18,292 L 18,266 L 44,266 L 44,304 L 62,304 L 62,278 L 90,278 L 90,318 L 154,318 L 154,282 L 182,282 L 182,258 L 210,258 L 210,295 L 228,295 L 228,248 L 256,248 L 256,288 L 274,288 L 274,268 L 288,268 L 288,385 Z"
+          fill="#051108" stroke="#184722" stroke-width="0.8"/>
+
+    <!-- Minimal crisp skyscraper window lights -->
+    <g fill="#39ff6a" opacity="0.26">
+      <rect x="24" y="276" width="2" height="3"/><rect x="30" y="276" width="2" height="3"/><rect x="36" y="276" width="2" height="3"/>
+      <rect x="24" y="286" width="2" height="3"/><rect x="36" y="286" width="2" height="3"/>
+      <rect x="68" y="288" width="2" height="3"/><rect x="74" y="288" width="2" height="3"/><rect x="80" y="298" width="2" height="3"/>
+      <rect x="162" y="292" width="2" height="3"/><rect x="168" y="292" width="2" height="3"/><rect x="162" y="302" width="2" height="3"/>
+      <rect x="189" y="268" width="2" height="3"/><rect x="195" y="268" width="2" height="3"/><rect x="201" y="268" width="2" height="3"/>
+      <rect x="189" y="278" width="2" height="3"/><rect x="201" y="278" width="2" height="3"/>
+      <rect x="235" y="258" width="2" height="3"/><rect x="241" y="258" width="2" height="3"/><rect x="247" y="258" width="2" height="3"/>
+      <rect x="235" y="268" width="2" height="3"/><rect x="247" y="268" width="2" height="3"/><rect x="241" y="278" width="2" height="3"/>
+    </g>
+
+    <!-- Animated Wind Streaks across the Gotham Sky -->
+    <g stroke="#39ff6a" stroke-width="0.9" stroke-linecap="round" opacity="0.2">
+      <line x1="20" y1="84" x2="65" y2="77">
         <animate attributeName="x1" values="-40;290" dur="2.1s" repeatCount="indefinite"/>
         <animate attributeName="x2" values="5;335" dur="2.1s" repeatCount="indefinite"/>
       </line>
-      <line x1="80" y1="200" x2="130" y2="192">
+      <line x1="80" y1="204" x2="130" y2="197">
         <animate attributeName="x1" values="-60;290" dur="1.7s" repeatCount="indefinite"/>
         <animate attributeName="x2" values="-10;340" dur="1.7s" repeatCount="indefinite"/>
       </line>
-      <line x1="40" y1="275" x2="95" y2="266">
-        <animate attributeName="x1" values="-50;290" dur="2.5s" repeatCount="indefinite"/>
-        <animate attributeName="x2" values="5;345" dur="2.5s" repeatCount="indefinite"/>
+      <line x1="40" y1="312" x2="95" y2="305">
+        <animate attributeName="x1" values="-50;290" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="x2" values="5;345" dur="2.4s" repeatCount="indefinite"/>
       </line>
     </g>
 
-    <!-- Taut Grapnel Line from Batman's raised right gauntlet into the Gotham night -->
-    <line x1="186" y1="196" x2="274" y2="56" stroke="#7dff9a" stroke-width="1.2" opacity="0.75">
-      <animate attributeName="opacity" values="0.45;0.9;0.45" dur="2.6s" repeatCount="indefinite"/>
-    </line>
+    <!-- Smaller Foreground Batman (Back View, Cool Brooding Rooftop Stance, Cape Flowing) -->
+    <!-- Legs & Boots in confident wide vigilante stance (visible beneath mid-calf flowing cape) -->
+    <path d="M 101,326 L 93,374 L 103,374 L 111,340 L 119,369 L 130,369 L 123,326 Z"
+          fill="#020503" stroke="#39ff6a" stroke-width="0.9" stroke-opacity="0.78"/>
 
-    <!-- Lower Legs / Boots planted heroically on the rooftop parapet -->
-    <path d="M 110,295 L 103,374 L 119,374 L 127,320 L 136,368 L 152,368 L 146,295 Z"
-          fill="#020503" stroke="#39ff6a" stroke-width="0.9" stroke-opacity="0.65"/>
+    <!-- Left Armored Forearm + Gauntlet Fins + Clenched Fist angled away from cape -->
+    <path d="M 97,300 L 89,322 L 89,333 L 94,334 L 99,316 Z"
+          fill="#020503" stroke="#39ff6a" stroke-width="0.85" stroke-opacity="0.82"/>
+    <path d="M 90,315 L 86,313 L 89,319 L 85,319 L 89,324"
+          fill="none" stroke="#7dff9a" stroke-width="0.8" stroke-linejoin="round"/>
 
-    <!-- Left Gauntlet + Fist & Raised Right Armored Grapnel Arm (with 3 gauntlet fins) -->
-    <path d="M 103,234 L 91,274 L 88,281 L 92,290 L 98,287 L 106,256 Z"
-          fill="#020503" stroke="#39ff6a" stroke-width="0.9" stroke-opacity="0.75"/>
-    <path d="M 150,224 L 172,212 L 182,199 L 184,193 L 190,196 L 186,204 L 178,220 L 154,238 Z"
-          fill="#020503" stroke="#7dff9a" stroke-width="1" stroke-opacity="0.9"/>
-    <!-- Gauntlet fins on raised forearm -->
-    <path d="M 171,213 L 168,207 L 174,210 L 173,204 L 178,207"
-          fill="none" stroke="#7dff9a" stroke-width="1" stroke-linejoin="round"/>
-
-    <!-- Seamless Back Silhouette: Cowl + Shoulders + Animated Flowing Cape -->
-    <path fill="url(#capeShade)" stroke="#39ff6a" stroke-width="1.15" stroke-opacity="0.9">
+    <!-- Seamless Back Silhouette: Subtle Head Tilt + Broad Shoulders + Wide Wind-Swept Cape -->
+    <path fill="url(#capeShade)" stroke="#39ff6a" stroke-width="1.05" stroke-opacity="0.92">
       <animate attributeName="d"
         values="
-          M 119,212 L 117,198 L 119,179 L 124,195 C 128,193 132,193 136,195 L 141,179 L 143,198 L 141,212 C 149,215 156,220 162,228 C 194,234 232,226 266,214 C 248,252 244,284 260,320 C 230,312 208,326 192,350 C 174,334 154,342 142,366 C 126,348 112,354 96,370 C 96,318 98,266 105,226 C 110,218 115,214 119,212 Z;
-          M 119,212 L 117,198 L 119,179 L 124,195 C 128,193 132,193 136,195 L 141,179 L 143,198 L 141,212 C 149,215 156,220 162,228 C 198,224 236,212 272,228 C 252,262 256,294 248,334 C 220,320 202,340 182,358 C 166,340 150,348 134,372 C 120,352 108,358 92,364 C 96,312 98,266 105,226 C 110,218 115,214 119,212 Z;
-          M 119,212 L 117,198 L 119,179 L 124,195 C 128,193 132,193 136,195 L 141,179 L 143,198 L 141,212 C 149,215 156,220 162,228 C 190,238 228,236 258,208 C 246,246 250,278 266,310 C 236,306 212,320 198,344 C 178,328 158,336 146,360 C 128,344 114,352 98,374 C 98,320 98,268 105,226 C 110,218 115,214 119,212 Z;
-          M 119,212 L 117,198 L 119,179 L 124,195 C 128,193 132,193 136,195 L 141,179 L 143,198 L 141,212 C 149,215 156,220 162,228 C 194,234 232,226 266,214 C 248,252 244,284 260,320 C 230,312 208,326 192,350 C 174,334 154,342 142,366 C 126,348 112,354 96,370 C 96,318 98,266 105,226 C 110,218 115,214 119,212 Z"
+          M 105,292 L 104,282 L 106,268 L 109,279 C 111,277 114,277 116,279 L 119,268 L 121,282 L 119,292 C 125,293 130,296 134,302 C 160,304 190,296 218,286 C 202,312 198,330 212,350 C 190,342 172,348 158,360 C 144,348 130,350 120,358 C 110,348 100,350 92,356 C 95,332 95,308 97,298 C 100,294 103,292 105,292 Z;
+          M 105,292 L 104,282 L 106,268 L 109,279 C 111,277 114,277 116,279 L 119,268 L 121,282 L 119,292 C 125,293 130,296 134,302 C 164,296 194,284 224,296 C 206,318 208,336 202,358 C 182,346 168,356 152,364 C 138,350 126,354 114,360 C 106,348 98,352 90,352 C 95,328 95,308 97,298 C 100,294 103,292 105,292 Z;
+          M 105,292 L 104,282 L 106,268 L 109,279 C 111,277 114,277 116,279 L 119,268 L 121,282 L 119,292 C 125,293 130,296 134,302 C 158,306 188,302 212,282 C 200,308 204,326 216,344 C 194,338 176,344 162,356 C 146,344 132,348 122,354 C 112,346 102,348 94,358 C 95,332 95,310 97,298 C 100,294 103,292 105,292 Z;
+          M 105,292 L 104,282 L 106,268 L 109,279 C 111,277 114,277 116,279 L 119,268 L 121,282 L 119,292 C 125,293 130,296 134,302 C 160,304 190,296 218,286 C 202,312 198,330 212,350 C 190,342 172,348 158,360 C 144,348 130,350 120,358 C 110,348 100,350 92,356 C 95,332 95,308 97,298 C 100,294 103,292 105,292 Z"
         dur="3.2s" repeatCount="indefinite"/>
     </path>
 
     <!-- Animated Cape Inner Fold Highlights -->
-    <path fill="none" stroke="#39ff6a" stroke-width="0.9" opacity="0.45">
+    <path fill="none" stroke="#39ff6a" stroke-width="0.8" opacity="0.5">
       <animate attributeName="d"
         values="
-          M 134,224 C 154,258 176,290 192,350;
-          M 134,224 C 160,256 172,298 182,358;
-          M 134,224 C 150,262 180,286 198,344;
-          M 134,224 C 154,258 176,290 192,350"
+          M 116,298 C 132,318 146,334 158,360;
+          M 116,298 C 136,316 144,338 152,364;
+          M 116,298 C 130,320 148,332 162,356;
+          M 116,298 C 132,318 146,334 158,360"
         dur="3.2s" repeatCount="indefinite"/>
     </path>
-    <path fill="none" stroke="#7dff9a" stroke-width="0.7" opacity="0.38">
+    <path fill="none" stroke="#7dff9a" stroke-width="0.65" opacity="0.4">
       <animate attributeName="d"
         values="
-          M 150,224 C 180,248 216,274 260,320;
-          M 150,224 C 186,244 220,284 248,334;
-          M 150,224 C 178,252 220,268 266,310;
-          M 150,224 C 180,248 216,274 260,320"
+          M 126,298 C 150,312 180,326 212,350;
+          M 126,298 C 156,310 184,332 202,358;
+          M 126,298 C 148,314 182,322 216,344;
+          M 126,298 C 150,312 180,326 212,350"
         dur="3.2s" repeatCount="indefinite"/>
     </path>
 
-    <!-- Top Cowl & Shoulder Rim-Highlight Only (facing Bat-Signal spotlight) -->
-    <path d="M 105,226 C 110,218 115,214 119,212 L 117,198 L 119,179 L 124,195 C 128,193 132,193 136,195 L 141,179 L 143,198 L 141,212 C 149,215 156,220 162,228"
-          fill="none" stroke="#b6ffca" stroke-width="1.3" opacity="0.85"/>
+    <!-- Top Cowl & Shoulder Rim-Highlight from Bat-Signal -->
+    <path d="M 97,298 C 100,294 103,292 105,292 L 104,282 L 106,268 L 109,279 C 111,277 114,277 116,279 L 119,268 L 121,282 L 119,292 C 125,293 130,296 134,302"
+          fill="none" stroke="#b6ffca" stroke-width="1.2" opacity="0.9"/>
 
-    <!-- Rooftop Parapet / Gargoyle Ledge -->
-    <path d="M 6,374 L 130,374 L 130,368 L 166,368 L 166,378 L 288,378 L 288,416 L 6,416 Z"
-          fill="#040b05" stroke="#39ff6a" stroke-width="1.1" stroke-opacity="0.5"/>
-    <text x="147" y="401" fill="#70c882" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="1.5">GOTHAM // WATCH_MODE</text>
+    <!-- Open Gotham Cliffside Rooftop Ledge (drops down on the right revealing the city below) -->
+    <path d="M 6,374 L 116,374 L 116,369 L 146,369 L 172,388 L 288,388 L 288,416 L 6,416 Z"
+          fill="#030804" stroke="#39ff6a" stroke-width="1.05" stroke-opacity="0.5"/>
+    <text x="147" y="405" fill="#70c882" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="1.5">GOTHAM // WATCH_MODE</text>
   </g>
 
   <!-- Vertical separator -->
